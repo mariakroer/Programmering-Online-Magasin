@@ -7,7 +7,7 @@
     --sagegrøn: #CAD4BF;
     --sort: #0c0c0c;
     --hvid: rgb(255, 255, 255); 
-    --grå: rgb(58, 58, 58);
+    --grå: rgb(58, 58, 58); 
   }
   
  * {
@@ -19,8 +19,8 @@
     vertical-align: baseline;
     background: transparent;
   }
-  
-  /**header style**/
+
+  /**Header style**/
 
 .navbar {
     margin: auto;
@@ -44,7 +44,7 @@
     float: left;
 }
 
-.navbar ul li a {
+.navbar ul li a:not(.rowbutton) {
     margin: 0 25px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -58,26 +58,26 @@
     width: 100%;
   }
   
-  .navbar, a {
+  .navbar, a:not(.rowbutton) {
     display: block;
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
   }
 
-#logo {
+ #logo {
     width: 200px;
     height: auto;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-}
+ }
 
-#logo img {
+ #logo img {
     width: 100%;
-}
+ }
 
-ul {
+ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -88,7 +88,7 @@ ul {
     float: left;
   }
   
-  li a, .dropbtn {
+  li a:not(.rowbutton), .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
@@ -108,7 +108,7 @@ ul {
     z-index: 1;
   }
   
-  .dropdown-content a {
+  .dropdown-content a:not(.rowbutton) {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -116,7 +116,7 @@ ul {
     text-align: left;
   }
   
-  .dropdown-content a:hover {
+  .dropdown-content a:hover:not(.rowbutton) {
     background-color: #f1f1f1;
   }
   
@@ -124,91 +124,77 @@ ul {
     display: block;
   }
 
-  /**main style**/
+/**main style**/
 
   main {
-   padding-top: 150px;
+   padding-top: 125px;
   }
 
-  .motivation {
-    background-color: var(--sagegrøn);
-    height: 400px;
-    margin-top: 30px;
-    line-height: 1.5;
-  }
+ h1, h2 {
+   font-family: Arial, Helvetica, sans-serif;
+ }
 
-  .tidsstyring, .selvdisciplin {
-    display: flex;
-    flex-direction: row-reverse;
-    background: linear-gradient(90deg, #fff 50%, #CAD4BF 0%);
-    padding-left: 8%;
-    padding-right: 5%;
-  }
+ h1 {
+   font-size: 35px;
+   padding-top: 5px;
+   padding-bottom: 20px;
+ }
 
-  .tidsstyringselvdisciplintekst {
-    padding-left: 5%;
-    line-height: 1.5;
-    padding-top: 40px;
-  }
+ p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 30px;
+ }
 
-  #logosammen {
-    float: right;
-    padding-top: 35px;
-    padding-right: 10%;
-  }
-
-#motivationtekst {
-  padding-right: 700px;
-}
-
-.bagrund {
-  background-color: var(--hvid);
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-  .selvdisciplin {
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-
-  h3 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-  }
-
-  p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
-    padding-bottom: 40px;
-  }
-
-.notebilleder {
-  margin-right: 13%;
-}
- 
-.knap {
-  background-color: var(--hvid);
-  padding-left: 5%;
+ h1, h2, p {
+  padding-left: 300px;
   padding-right: 300px;
-  padding-bottom: 20px;
-}
+  line-height: 1.5;
+ }
 
-.læsmereknap {
+ .logoinsttik {
+  display: flex;
+  justify-content: center;
+  background-color: var(--sagegrøn);
+ }
+
+ .logoinstatik {
+  width: 100px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+ }
+
+ .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  background: linear-gradient(0deg, #fff 35%, #CAD4BF 0%);
+  padding-left: 300px;
+  padding-right: 300px;
+ }
+
+ .rowbutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 300px;
+  padding-right: 300px;
+ }
+
+ .stylebutton {
   background-color: var(--sort);
   color: var(--hvid);
   padding: 10px 15px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
-}
+ }
 
-.læsmereknap:hover {
+ .stylebutton:hover {
   background-color: var(--grå);
-}
+ }
 
 /**footer style**/
 
